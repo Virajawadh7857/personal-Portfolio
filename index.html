@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Vikash Raj's portfolio showcasing Java Full Stack development skills, projects, and experience.">
+    <meta
+        name="description"
+        content="Vikash Raj — Java Full Stack Developer specializing in Java, Spring Boot, REST APIs, Angular, and full stack application development."
+    >
+
+    <meta name="theme-color" content="#10110f">
 
     <title>Vikash Raj | Java Full Stack Developer</title>
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Website icon -->
-    <meta name="theme-color" content="#0b1020">
+    <!-- Optional website icon -->
+    <link rel="icon" href="assets/profile.png" type="image/png">
 </head>
 
 <body>
 
-    <!-- ========== NAVIGATION ========== -->
-    <header class="header">
-        <nav class="navbar container">
+    <!-- ================= NAVIGATION ================= -->
 
-            <a href="#home" class="logo">
-                Vikash<span>.</span>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="brand" aria-label="Vikash Raj home">
+                VR<span class="brand-dot">.</span>
             </a>
 
             <button
                 class="menu-toggle"
                 id="menu-toggle"
+                type="button"
                 aria-label="Toggle navigation"
-                aria-expanded="false">
+                aria-controls="nav-links"
+                aria-expanded="false"
+            >
                 ☰
             </button>
 
@@ -39,12 +47,11 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <a href="resume.pdf" class="nav-resume" target="_blank" rel="noopener">
-                View Resume ↗
+            <a href="#contact" class="nav-cta">
+                Let's Talk <span aria-hidden="true">↗</span>
             </a>
 
         </nav>
@@ -53,191 +60,293 @@
 
     <main>
 
-        <!-- ========== HERO SECTION ========== -->
-        <section class="hero section" id="home">
-            <div class="container hero-grid">
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+            <div class="container hero-layout">
 
                 <div class="hero-content">
 
-                    <p class="eyebrow">
+                    <div class="availability">
+                        <span class="availability-dot"></span>
                         JAVA FULL STACK DEVELOPER
+                    </div>
+
+                    <p class="hero-intro">
+                        Hello, I'm Vikash Raj.
                     </p>
 
                     <h1>
-                        Hi, I'm <span>Vikash Raj</span>.<br>
-                        I build reliable web applications.
+                        I build
+                        <span class="headline-accent">digital</span>
+                        <span class="headline-outline">solutions.</span>
                     </h1>
 
                     <p class="hero-description">
-                        I develop backend-driven applications using Java and
-                        Spring Boot, build interactive interfaces with Angular,
-                        and explore automation and cloud technologies to deliver
-                        maintainable software.
+                        I develop practical web applications with Java,
+                        Spring Boot, Angular, and MySQL. I enjoy solving
+                        backend problems, building clean interfaces, and
+                        improving software delivery through automation.
                     </p>
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">
-                            Explore My Projects ↗
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="button button-primary">
+                            Explore My Work
+                            <span aria-hidden="true">↗</span>
                         </a>
 
-                        <a href="resume.pdf"
-                           class="btn btn-secondary"
-                           target="_blank"
-                           rel="noopener">
-                            Download Resume ↓
+                        <a
+                            href="resume.pdf"
+                            class="button button-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            View Resume
+                            <span aria-hidden="true">↗</span>
                         </a>
+
                     </div>
 
-                    <div class="hero-socials">
-                        <a href="https://github.com/Virajawadh7857"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
+                    <div class="social-links">
+
+                        <a
+                            href="https://github.com/Virajawadh7857"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub <span aria-hidden="true">↗</span>
                         </a>
 
+                        <!-- Replace # with your actual LinkedIn URL -->
                         <a href="#contact">
-                            Contact Me ↗
+                            Let's Connect <span aria-hidden="true">↗</span>
                         </a>
+
                     </div>
 
                 </div>
 
-                <div class="hero-visual">
-                    <div class="visual-glow"></div>
 
-                    <div class="code-card">
-                        <div class="code-header">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <p>Developer.java</p>
+                <!-- PERSONAL PHOTO -->
+
+                <div class="hero-profile">
+
+                    <div class="photo-orbit orbit-one"></div>
+                    <div class="photo-orbit orbit-two"></div>
+
+                    <div class="photo-card">
+
+                        <div class="photo-topline">
+                            <span>DEVELOPER PROFILE</span>
+                            <span>01 / 01</span>
                         </div>
 
-                        <pre><code><span class="code-purple">public class</span> Developer {
+                        <div class="profile-image-wrapper">
 
-    String name = <span class="code-green">"Vikash Raj"</span>;
+                            <img
+                                src="assets/profile.png"
+                                alt="Portrait of Vikash Raj"
+                                class="profile-image"
+                                width="420"
+                                height="480"
+                                fetchpriority="high"
+                            >
 
-    String role =
-        <span class="code-green">"Java Developer"</span>;
+                            <div class="image-label">
+                                <span>VR</span>
+                            </div>
 
-    <span class="code-purple">void</span> build() {
-        solveProblems();
-        writeCleanCode();
-        keepLearning();
-    }
-}</code></pre>
+                        </div>
+
+                        <div class="photo-caption">
+                            <div>
+                                <p class="caption-label">BASED IN</p>
+                                <p class="caption-value">India</p>
+                            </div>
+
+                            <div class="caption-right">
+                                <p class="caption-label">FOCUS</p>
+                                <p class="caption-value">Full Stack</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="floating-badge badge-top">
-                        ☕ Java & Spring Boot
+                    <div class="floating-card floating-java">
+                        <span class="floating-symbol">J</span>
+
+                        <div>
+                            <strong>Java</strong>
+                            <span>Backend Development</span>
+                        </div>
                     </div>
 
-                    <div class="floating-badge badge-bottom">
-                        ⚡ Building & Learning
+                    <div class="floating-card floating-spring">
+                        <span class="spring-symbol">✳</span>
+
+                        <div>
+                            <strong>Spring Boot</strong>
+                            <span>REST APIs</span>
+                        </div>
                     </div>
+
+                    <span class="decorative-cross cross-one">+</span>
+                    <span class="decorative-cross cross-two">+</span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-index" aria-hidden="true">
+                PORTFOLIO / 2026
+            </div>
+
+        </section>
+
+
+        <!-- ================= TECH STRIP ================= -->
+
+        <section class="tech-strip" aria-label="Technology overview">
+            <div class="container tech-strip-inner">
+
+                <span class="strip-label">MY TECH UNIVERSE</span>
+
+                <div class="tech-strip-items">
+                    <span>JAVA</span>
+                    <span>SPRING BOOT</span>
+                    <span>ANGULAR</span>
+                    <span>MYSQL</span>
+                    <span>DOCKER</span>
+                    <span>JENKINS</span>
                 </div>
 
             </div>
         </section>
 
 
-        <!-- ========== ABOUT SECTION ========== -->
-        <section class="section section-alt" id="about">
+        <!-- ================= ABOUT ================= -->
+
+        <section class="section section-about" id="about">
             <div class="container">
 
-                <div class="section-heading">
-                    <p class="eyebrow">GET TO KNOW ME</p>
-                    <h2>About <span>Me</span></h2>
+                <div class="section-kicker">
+                    <span>01</span>
+                    <span>BEHIND THE CODE</span>
                 </div>
 
-                <div class="about-grid">
+                <div class="about-layout">
 
-                    <div class="about-intro">
-                        <h3>Focused on building useful software.</h3>
+                    <div class="section-title-block">
+                        <h2>
+                            More than
+                            <span>just code.</span>
+                        </h2>
+                    </div>
 
-                        <p>
-                            I'm a Java Full Stack Developer interested in
-                            building practical, maintainable web applications.
-                            My primary focus is backend development with Java,
-                            Spring Boot, REST APIs, and MySQL.
+                    <div class="about-content">
+
+                        <p class="about-lead">
+                            I enjoy turning requirements into useful,
+                            reliable software.
                         </p>
 
                         <p>
-                            I also work with Angular and TypeScript to connect
-                            backend services to interactive user interfaces.
-                            Through personal projects, I'm expanding my
-                            knowledge of Docker, Jenkins, AWS, and automated
-                            deployment workflows.
+                            My primary focus is Java backend development
+                            with Spring Boot, REST APIs, Spring Data JPA,
+                            Hibernate, and MySQL. I also work with Angular
+                            to connect backend services to user-friendly
+                            interfaces.
                         </p>
 
-                        <a href="#contact" class="text-link">
-                            Let's connect ↗
+                        <p>
+                            Through hands-on projects, I have explored
+                            Git-based development workflows, Docker
+                            containers, Jenkins pipelines, automated
+                            builds, and application deployment.
+                        </p>
+
+                        <p>
+                            I value readable code, systematic debugging,
+                            continuous learning, and understanding how
+                            software moves from development to deployment.
+                        </p>
+
+                        <a href="#projects" class="inline-link">
+                            Discover my projects <span>↗</span>
                         </a>
-                    </div>
-
-                    <div class="about-facts">
-
-                        <div class="fact-card">
-                            <span class="fact-icon">☕</span>
-                            <h3>Backend Development</h3>
-                            <p>Java, Spring Boot, REST APIs and JPA</p>
-                        </div>
-
-                        <div class="fact-card">
-                            <span class="fact-icon">◈</span>
-                            <h3>Full Stack Development</h3>
-                            <p>Angular, TypeScript, HTML and CSS</p>
-                        </div>
-
-                        <div class="fact-card">
-                            <span class="fact-icon">⚙</span>
-                            <h3>Development Workflow</h3>
-                            <p>Git, Docker, Jenkins and automated builds</p>
-                        </div>
-
-                        <div class="fact-card">
-                            <span class="fact-icon">↗</span>
-                            <h3>Continuous Learning</h3>
-                            <p>Cloud technologies and software engineering</p>
-                        </div>
 
                     </div>
 
                 </div>
+
             </div>
         </section>
 
 
-        <!-- ========== SKILLS SECTION ========== -->
-        <section class="section" id="skills">
+        <!-- ================= SKILLS ================= -->
+
+        <section class="section section-skills" id="skills">
             <div class="container">
 
-                <div class="section-heading">
-                    <p class="eyebrow">MY TOOLKIT</p>
-                    <h2>Technical <span>Skills</span></h2>
+                <div class="section-kicker">
+                    <span>02</span>
+                    <span>TOOLS OF THE TRADE</span>
+                </div>
+
+                <div class="section-heading-row">
+
+                    <h2>
+                        My technical
+                        <span>toolkit.</span>
+                    </h2>
+
                     <p>
-                        Technologies I use and explore while building
-                        applications.
+                        Technologies I use and continue to explore
+                        while building software.
                     </p>
+
                 </div>
+
 
                 <div class="skills-grid">
 
-                    <article class="skill-card">
-                        <h3>Backend</h3>
+                    <article class="skill-panel">
+                        <span class="skill-number">01</span>
+
+                        <div class="skill-icon" aria-hidden="true">J</div>
+
+                        <h3>Backend Engineering</h3>
+
+                        <p>
+                            Building server-side applications and
+                            reliable REST APIs.
+                        </p>
+
                         <div class="skill-tags">
                             <span>Java 8</span>
                             <span>Java 17</span>
                             <span>Spring Boot</span>
+                            <span>Spring MVC</span>
                             <span>REST APIs</span>
-                            <span>Spring Data JPA</span>
-                            <span>Hibernate</span>
-                            <span>Microservices</span>
+                            <span>JPA / Hibernate</span>
                         </div>
                     </article>
 
-                    <article class="skill-card">
-                        <h3>Frontend</h3>
+
+                    <article class="skill-panel">
+                        <span class="skill-number">02</span>
+
+                        <div class="skill-icon skill-icon-angular"
+                             aria-hidden="true">A</div>
+
+                        <h3>Frontend Development</h3>
+
+                        <p>
+                            Creating interfaces that work across
+                            desktop and mobile devices.
+                        </p>
+
                         <div class="skill-tags">
                             <span>Angular</span>
                             <span>TypeScript</span>
@@ -247,8 +356,20 @@
                         </div>
                     </article>
 
-                    <article class="skill-card">
-                        <h3>Database & Testing</h3>
+
+                    <article class="skill-panel">
+                        <span class="skill-number">03</span>
+
+                        <div class="skill-icon skill-icon-database"
+                             aria-hidden="true">DB</div>
+
+                        <h3>Data & Testing</h3>
+
+                        <p>
+                            Persisting application data and verifying
+                            expected behavior.
+                        </p>
+
                         <div class="skill-tags">
                             <span>MySQL</span>
                             <span>SQL</span>
@@ -258,58 +379,144 @@
                         </div>
                     </article>
 
-                    <article class="skill-card">
-                        <h3>Tools & DevOps</h3>
+
+                    <article class="skill-panel">
+                        <span class="skill-number">04</span>
+
+                        <div class="skill-icon skill-icon-devops"
+                             aria-hidden="true">↗</div>
+
+                        <h3>Tools & Delivery</h3>
+
+                        <p>
+                            Managing code, containers, builds, and
+                            deployment workflows.
+                        </p>
+
                         <div class="skill-tags">
                             <span>Git</span>
                             <span>GitHub</span>
                             <span>Maven</span>
                             <span>Docker</span>
                             <span>Jenkins</span>
-                            <span>AWS</span>
-                            <span>Linux</span>
+                            <span>AWS — Learning</span>
                         </div>
                     </article>
 
                 </div>
 
-                <p class="skills-note">
-                    Skills are presented for professional portfolio purposes;
-                    proficiency should reflect your actual experience.
-                </p>
-
             </div>
         </section>
 
 
-        <!-- ========== PROJECTS SECTION ========== -->
-        <section class="section section-alt" id="projects">
+        <!-- ================= PROJECTS ================= -->
+
+        <section class="section section-projects" id="projects">
             <div class="container">
 
-                <div class="section-heading">
-                    <p class="eyebrow">SELECTED WORK</p>
-                    <h2>Featured <span>Projects</span></h2>
-                    <p>
-                        Practical applications demonstrating backend,
-                        frontend, database, and deployment concepts.
-                    </p>
+                <div class="section-kicker">
+                    <span>03</span>
+                    <span>SELECTED WORK</span>
                 </div>
 
-                <div class="projects-grid">
+                <div class="section-heading-row">
 
-                    <article class="project-card">
+                    <h2>
+                        Things I've
+                        <span>built.</span>
+                    </h2>
 
-                        <div class="project-number">PROJECT 01</div>
+                    <p>
+                        Practical projects that demonstrate my
+                        approach to application development.
+                    </p>
 
-                        <div class="project-icon">▤</div>
+                </div>
+
+
+                <!-- PROJECT 1 -->
+
+                <article class="project-feature">
+
+                    <div class="project-visual project-visual-leave">
+
+                        <div class="mock-browser">
+
+                            <div class="mock-browser-bar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+
+                                <p>leave-management.app</p>
+                            </div>
+
+                            <div class="mock-dashboard">
+
+                                <div class="mock-sidebar">
+                                    <span class="mock-brand">LR.</span>
+                                    <span class="mock-sidebar-active"></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="mock-content">
+
+                                    <p class="mock-overline">
+                                        EMPLOYEE DASHBOARD
+                                    </p>
+
+                                    <h4>Leave Overview</h4>
+
+                                    <div class="mock-stats">
+                                        <div>
+                                            <span>Pending</span>
+                                            <strong>03</strong>
+                                        </div>
+
+                                        <div>
+                                            <span>Approved</span>
+                                            <strong>08</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="mock-table">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="mock-table mock-table-short">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <span class="visual-label">
+                            FULL STACK / 01
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <p class="project-category">
+                            FULL STACK APPLICATION
+                        </p>
 
                         <h3>Employee Leave Request System</h3>
 
                         <p>
-                            A full stack application for managing employee
-                            leave requests, with validation, REST APIs,
-                            database integration, and a responsive Angular
-                            interface.
+                            A web application for managing leave requests,
+                            with backend validation, REST APIs, persistent
+                            storage, and an Angular interface.
                         </p>
 
                         <div class="project-tags">
@@ -321,30 +528,83 @@
                             <span>Jenkins</span>
                         </div>
 
-                        <div class="project-links">
-                            <a href="https://github.com/Virajawadh7857/employee-leave-request-system"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                Source Code ↗
+                        <div class="project-actions">
+
+                            <a
+                                href="https://github.com/Virajawadh7857/employee-leave-request-system"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                View Source Code <span>↗</span>
                             </a>
+
                         </div>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="project-card">
+                <!-- PROJECT 2 -->
 
-                        <div class="project-number">PROJECT 02</div>
+                <article class="project-feature project-reverse">
 
-                        <div class="project-icon">▦</div>
+                    <div class="project-visual project-visual-payroll">
+
+                        <div class="payroll-visual-card">
+
+                            <div class="payroll-topline">
+                                <span>PAYROLL / OVERVIEW</span>
+                                <span>↗</span>
+                            </div>
+
+                            <div class="payroll-heading">
+                                <span>Payroll Summary</span>
+                                <strong>₹</strong>
+                            </div>
+
+                            <div class="payroll-line">
+                                <span>Base salary</span>
+                                <span>Employee compensation</span>
+                            </div>
+
+                            <div class="payroll-line">
+                                <span>Allowances</span>
+                                <span>Additional earnings</span>
+                            </div>
+
+                            <div class="payroll-line">
+                                <span>Deductions</span>
+                                <span>Salary adjustments</span>
+                            </div>
+
+                            <div class="payroll-bottomline">
+                                <span>MONTHLY PROCESSING</span>
+                                <span class="payroll-status">● WORKFLOW</span>
+                            </div>
+
+                        </div>
+
+                        <span class="visual-label">
+                            BACKEND SYSTEM / 02
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <p class="project-category">
+                            BACKEND & BUSINESS LOGIC
+                        </p>
 
                         <h3>Employee Payroll Management System</h3>
 
                         <p>
                             An employee management application focused on
-                            payroll processing, salary calculations,
-                            role-based workflows, and backend service
-                            integration.
+                            payroll workflows, salary calculations,
+                            business rules, and backend service integration.
                         </p>
 
                         <div class="project-tags">
@@ -352,136 +612,167 @@
                             <span>Spring Boot</span>
                             <span>MySQL</span>
                             <span>REST APIs</span>
-                            <span>Microservices</span>
+                            <span>Docker</span>
                         </div>
 
-                        <div class="project-links">
-                            <a href="https://github.com/Virajawadh7857"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                GitHub Profile ↗
+                        <div class="project-actions">
+
+                            <a
+                                href="https://github.com/Virajawadh7857"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Explore GitHub <span>↗</span>
                             </a>
+
                         </div>
-
-                    </article>
-
-
-                    <article class="project-card">
-
-                        <div class="project-number">PROJECT 03</div>
-
-                        <div class="project-icon">✚</div>
-
-                        <h3>Doctor Appointment Management System</h3>
-
-                        <p>
-                            An appointment management application designed
-                            around doctor availability, patient bookings,
-                            validation, and reliable appointment handling.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>JPA</span>
-                            <span>MySQL</span>
-                            <span>REST APIs</span>
-                        </div>
-
-                        <div class="project-links">
-                            <a href="https://github.com/Virajawadh7857"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                GitHub Profile ↗
-                            </a>
-                        </div>
-
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ========== EXPERIENCE SECTION ========== -->
-        <section class="section" id="experience">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">MY JOURNEY</p>
-                    <h2>Experience & <span>Growth</span></h2>
-                </div>
-
-                <div class="experience-card">
-
-                    <div class="experience-marker"></div>
-
-                    <div class="experience-content">
-                        <p class="eyebrow">PROFESSIONAL EXPERIENCE</p>
-
-                        <h3>Software Development</h3>
-
-                        <p class="experience-description">
-                            Experience working with Java technologies,
-                            backend services, databases, and full stack
-                            application development.
-                        </p>
-
-                        <ul>
-                            <li>Developing and maintaining application features.</li>
-                            <li>Building REST APIs and integrating databases.</li>
-                            <li>Debugging issues and improving application reliability.</li>
-                            <li>Collaborating through Git-based development workflows.</li>
-                        </ul>
 
                     </div>
 
-                </div>
+                </article>
 
-                <p class="experience-note">
-                    Specific employer names, dates, responsibilities, and
-                    achievements should be verified against your resume
-                    before publishing.
-                </p>
+
+                <div class="more-projects">
+                    <p>More experiments. More things to build.</p>
+
+                    <a
+                        href="https://github.com/Virajawadh7857"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-link"
+                    >
+                        Explore my GitHub <span>↗</span>
+                    </a>
+                </div>
 
             </div>
         </section>
 
 
-        <!-- ========== CONTACT SECTION ========== -->
-        <section class="section contact-section" id="contact">
-            <div class="container contact-container">
+        <!-- ================= WORKFLOW ================= -->
 
-                <p class="eyebrow">GET IN TOUCH</p>
+        <section class="section section-workflow" id="workflow">
+            <div class="container">
 
-                <h2>Let's build something <span>meaningful.</span></h2>
+                <div class="section-kicker">
+                    <span>04</span>
+                    <span>HOW I WORK</span>
+                </div>
 
-                <p>
-                    Interested in discussing software development,
-                    collaborating on projects, or exploring new opportunities?
-                    Feel free to connect.
-                </p>
+                <div class="section-heading-row">
 
-                <div class="contact-actions">
+                    <h2>
+                        From idea
+                        <span>to delivery.</span>
+                    </h2>
 
-                    <a href="mailto:YOUR_EMAIL@example.com"
-                       class="btn btn-primary">
-                        Email Me ↗
-                    </a>
-
-                    <a href="https://github.com/Virajawadh7857"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="btn btn-secondary">
-                        GitHub ↗
-                    </a>
+                    <p>
+                        Understanding the development lifecycle is just
+                        as important as writing code.
+                    </p>
 
                 </div>
 
-                <p class="contact-note">
-                    Replace the email placeholder with your professional
-                    email address before publishing.
-                </p>
+
+                <div class="workflow-grid">
+
+                    <article class="workflow-item">
+                        <span class="workflow-index">01</span>
+                        <h3>Understand</h3>
+                        <p>
+                            Break requirements into clear tasks and
+                            expected outcomes.
+                        </p>
+                    </article>
+
+                    <article class="workflow-item">
+                        <span class="workflow-index">02</span>
+                        <h3>Build</h3>
+                        <p>
+                            Implement backend and frontend features
+                            with maintainability in mind.
+                        </p>
+                    </article>
+
+                    <article class="workflow-item">
+                        <span class="workflow-index">03</span>
+                        <h3>Validate</h3>
+                        <p>
+                            Test APIs, review logs, and verify
+                            application behavior.
+                        </p>
+                    </article>
+
+                    <article class="workflow-item">
+                        <span class="workflow-index">04</span>
+                        <h3>Deliver</h3>
+                        <p>
+                            Use Git workflows, Docker, and CI/CD
+                            to prepare application releases.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section class="section section-contact" id="contact">
+            <div class="container">
+
+                <div class="contact-panel">
+
+                    <div class="contact-decoration" aria-hidden="true">
+                        VR.
+                    </div>
+
+                    <div class="contact-content">
+
+                        <p class="project-category">
+                            HAVE A PROJECT OR OPPORTUNITY?
+                        </p>
+
+                        <h2>
+                            Let's create
+                            <span>something useful.</span>
+                        </h2>
+
+                        <p>
+                            I'm interested in software development,
+                            meaningful projects, and opportunities to
+                            keep learning and contribute.
+                        </p>
+
+                        <div class="contact-actions">
+
+                            <!-- Replace the email before publishing -->
+                            <a
+                                href="mailto:rajvikash.technical@gmail.com"
+                                class="button button-primary"
+                            >
+                                Email Me <span>↗</span>
+                            </a>
+
+                            <a
+                                href="https://github.com/Virajawadh7857"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="button button-outline"
+                            >
+                                GitHub <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <p class="contact-index">LET'S CONNECT / 2026</p>
+
+                </div>
 
             </div>
         </section>
@@ -489,17 +780,19 @@
     </main>
 
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container footer-content">
+    <!-- ================= FOOTER ================= -->
 
-            <a href="#home" class="logo">
-                Vikash<span>.</span>
+    <footer class="site-footer">
+
+        <div class="container footer-inner">
+
+            <a href="#home" class="brand">
+                VR<span class="brand-dot">.</span>
             </a>
 
             <p>
-                © <span id="current-year"></span> Vikash Raj.
-                Built with HTML, CSS and JavaScript.
+                Designed & built by Vikash Raj.
+                <span id="current-year"></span>
             </p>
 
             <a href="#home" class="back-to-top">
@@ -507,11 +800,12 @@
             </a>
 
         </div>
+
     </footer>
 
 
-    <!-- Main JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
