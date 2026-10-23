@@ -1978,4 +1978,35 @@ section[id] {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+
+/* ==========================================
+   SCROLL REVEAL ANIMATIONS
+========================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+
+    transition:
+        opacity 650ms ease,
+        transform 650ms ease;
+
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 }

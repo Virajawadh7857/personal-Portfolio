@@ -82,4 +82,80 @@ document.addEventListener("DOMContentLoaded", () => {
         currentYear.textContent = new Date().getFullYear();
     }
 
+    // ========================================
+// SCROLL REVEAL ANIMATIONS
+// ========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Respect the visitor's motion preference.
+    const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    // Keep content visible if animations aren't supported.
+    if (
+        prefersReducedMotion ||
+        !("IntersectionObserver" in window)
+    ) {
+        return;
+    }
+
+    // Elements that reveal themselves as visitors scroll.
+    const selectors = [
+        ".hero-content",
+        ".hero-profile",
+        ".tech-strip-inner",
+        ".section-kicker",
+        ".section-heading-row",
+        ".about-layout",
+        ".skill-panel",
+        ".project-feature",
+        ".more-projects",
+        ".workflow-item",
+        ".contact-panel"
+    ];
+
+    const elements = document.querySelectorAll(
+        selectors.join(",")
+    );
+
+    const observer = new IntersectionObserver(
+        (entries, observerInstance) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("is-visible");
+
+                    // Animate each element only once.
+                    observerInstance.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -30px 0px"
+        }
+    );
+
+    elements.forEach((element, index) => {
+
+        element.classList.add("reveal");
+
+        // Slightly stagger nearby elements.
+        element.style.setProperty(
+            "--reveal-delay",
+            `${(index % 4) * 80}ms`
+        );
+
+        observer.observe(element);
+
+    });
+
+});
+
 });
